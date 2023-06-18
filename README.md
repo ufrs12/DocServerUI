@@ -9,4 +9,4 @@ docker run -p 8000:80 -v /var/docker/share:/usr/share/share/ gui
 
 
 
-http://"IP-server":8000/soft/
+http://"IP-server":8000/share/
