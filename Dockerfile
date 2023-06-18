@@ -5,9 +5,8 @@
 #COPY ./react .
 #RUN npm run build
 
-FROM nginx:1.18.0-alpine
-#COPY --from=build /app/build /usr/share/nginx/html
+FROM nginx:stable-alpine3.17-slim
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
-COPY ./1.zip /usr/share/soft/
+RUN mkdir -p /usr/share/share/
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
